@@ -1,0 +1,16 @@
+2025-05-21 04:19:04,915 INFO __main__ <module>: Application logging configured.
+2025-05-21 04:19:04,915 INFO __main__ <module>: Project root: C:\Users\lombi\midi_composer_test
+2025-05-21 04:19:04,920 CRITICAL __main__ <module>: Failed to import GUI modules: No module named 'src.core.settings_manager'
+Traceback (most recent call last):
+  File "C:\Users\lombi\midi_composer_test\src\main.py", line 334, in <module>
+    from src.gui.main_window import MainWindow
+  File "C:\Users\lombi\midi_composer_test\src\gui\main_window.py", line 22, in <module>
+    from src.core.settings_manager import SettingsManager
+ModuleNotFoundError: No module named 'src.core.settings_manager'
+2025-05-21 04:19:05,000 CRITICAL __main__ run_application: Uygulama çalıştırılırken beklenmeyen bir hata oluştu: No module named 'src.core.settings_manager'
+Traceback (most recent call last):
+  File "C:\Users\lombi\midi_composer_test\src\main.py", line 1341, in run_application
+    from src.gui.main_window import MainWindow
+  File "C:\Users\lombi\midi_composer_test\src\gui\main_window.py", line 22, in <module>
+    from src.core.settings_manager import SettingsManager
+ModuleNotFoundError: No module named 'src.core.settings_manager'

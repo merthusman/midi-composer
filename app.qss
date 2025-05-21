@@ -1,0 +1,357 @@
+/*
+MIDI COMPOSER - Yeni Arayüz Stili
+Arkaplan fotoğrafıyla uyumlu, tutarlı ve modern bir arayüz için optimize edilmiş tema.
+*/
+
+/* --- Genel Stiller --- */
+* {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 12px;
+}
+
+QMainWindow {
+    background-color: #1A1B35; /* Koyu mavi arkaplan */
+    color: #FFFFFF;
+}
+
+QWidget {
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+/* --- Panel Stilleri --- */
+/* Tüm paneller için tutarlı temel stil */
+QGroupBox {
+    background-color: rgba(30, 30, 30, 0.85); /* Koyu gri, yüksek opaklık */
+    border: 1px solid rgba(80, 80, 80, 0.7);
+    border-radius: 8px;
+    margin-top: 1.8em;
+    padding: 15px;
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 10px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+/* --- Sekme Stilleri --- */
+QTabWidget::pane {
+    border: 1px solid rgba(80, 80, 80, 0.7);
+    border-radius: 4px;
+    background: rgba(30, 30, 30, 0.85);
+    margin: 0px;
+    padding: 0px;
+}
+
+QTabBar::tab {
+    background: rgba(40, 40, 40, 0.9);
+    color: #FFFFFF;
+    border: 1px solid rgba(80, 80, 80, 0.7);
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width: 100px;
+    padding: 8px 16px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background: #00BCD4; /* Turkuaz - seçili sekme */
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+QTabBar::tab:!selected {
+    background: rgba(40, 40, 40, 0.9);
+    color: #CCCCCC;
+}
+
+QTabBar::tab:hover:!selected {
+    background: rgba(60, 60, 60, 0.9);
+}
+
+/* --- Buton Stilleri --- */
+/* Tüm butonlar için tutarlı temel stil */
+QPushButton {
+    background-color: #00BCD4; /* Turkuaz - tüm butonlar için */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    margin: 4px;
+    min-width: 130px;
+    min-height: 30px;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+QPushButton:hover {
+    background-color: #26C6DA; /* Daha açık turkuaz */
+}
+
+QPushButton:pressed {
+    background-color: #0097A7; /* Daha koyu turkuaz */
+}
+
+QPushButton:disabled {
+    background-color: rgba(0, 188, 212, 0.3);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- Etiket Stilleri --- */
+QLabel {
+    color: #FFFFFF;
+    font-size: 11pt;
+    padding: 5px;
+    background-color: transparent; /* Etiketlerin arkaplanı şeffaf */
+    min-height: 20px;
+}
+
+/* Başlık etiketleri */
+QLabel[objectName="title_label"], QLabel[objectName="section_label"] {
+    color: #FFFFFF;
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 8px;
+}
+
+/* Parametre etiketleri */
+QLabel[objectName="param_label"], QLabel[objectName="path_label"], QLabel[objectName="file_path_label"] {
+    color: #FFFFFF;
+    font-size: 11pt;
+    padding: 5px 10px;
+    min-width: 120px;
+    min-height: 25px;
+}
+
+/* Bilgi etiketleri */
+QLabel[objectName="file_path_display"], QLabel[objectName="result_info"], QLabel[objectName="status_label"] {
+    color: #FFFFFF;
+    font-size: 11pt;
+    padding: 4px 10px;
+    min-height: 25px;
+    border-left: 3px solid #00BCD4; /* Turkuaz kenar çizgisi */
+}
+
+/* Piyano rulosu etiketleri */
+QLabel[objectName="piano_roll_label"], QLabel[objectName="detail_label"] {
+    color: #FFFFFF;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* --- Giriş Alanları --- */
+QLineEdit, QTextEdit, QSpinBox, QDoubleSpinBox, QComboBox {
+    background-color: rgba(45, 45, 45, 0.9);
+    color: #FFFFFF;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    padding: 5px 10px;
+    min-height: 30px;
+    min-width: 150px;
+    font-size: 10pt;
+}
+
+QLineEdit:focus, QTextEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QComboBox:focus {
+    border: 1px solid #00BCD4; /* Turkuaz - odaklanma rengi */
+    background-color: rgba(0, 188, 212, 0.2);
+}
+
+QLineEdit:disabled, QTextEdit:disabled, QSpinBox:disabled, QDoubleSpinBox:disabled, QComboBox:disabled {
+    background-color: rgba(45, 45, 45, 0.5);
+    color: #AAAAAA;
+}
+
+/* --- Liste ve Metin Alanları --- */
+QListWidget, QTextEdit {
+    background-color: rgba(30, 30, 30, 0.9);
+    color: #FFFFFF;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    padding: 8px;
+    alternate-background-color: rgba(40, 40, 40, 0.5);
+    min-height: 150px;
+}
+
+QListWidget::item {
+    padding: 8px;
+    border-radius: 4px;
+    margin: 2px 0;
+    min-height: 25px;
+}
+
+QListWidget::item:selected {
+    background-color: #00BCD4; /* Turkuaz - seçili öğe */
+    color: #FFFFFF;
+}
+
+QListWidget::item:hover:!selected {
+    background-color: rgba(0, 188, 212, 0.3);
+}
+
+/* --- Kaydırma Çubuğu --- */
+QScrollBar:vertical {
+    border: none;
+    background: rgba(30, 30, 30, 0.5);
+    width: 10px;
+    margin: 0;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background: rgba(80, 80, 80, 0.7);
+    min-height: 30px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: rgba(100, 100, 100, 0.8);
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+    background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background: rgba(30, 30, 30, 0.5);
+    height: 10px;
+    margin: 0;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background: rgba(80, 80, 80, 0.7);
+    min-width: 30px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: rgba(100, 100, 100, 0.8);
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0;
+    background: none;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+/* --- İlerleme Çubuğu --- */
+QProgressBar {
+    border: 1px solid rgba(80, 80, 80, 0.7);
+    border-radius: 6px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: rgba(30, 30, 30, 0.7);
+    padding: 1px;
+    height: 24px;
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+QProgressBar::chunk {
+    background-color: #00BCD4; /* Turkuaz - ilerleme rengi */
+    border-radius: 5px;
+    margin: 1px;
+}
+
+/* --- Durum Çubuğu --- */
+QStatusBar {
+    background-color: rgba(30, 30, 30, 0.9);
+    color: #FFFFFF;
+    border-top: 1px solid #555555;
+    padding: 2px 5px;
+    min-height: 25px;
+}
+
+QStatusBar::item {
+    border: none;
+}
+
+/* --- Piyano Rulosu Görüntüleme --- */
+QLabel[objectName="piano_roll_display"], QLabel[objectName="generated_piano_roll"], QLabel[objectName="pattern_piano_roll"] {
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 1px solid #555555;
+    border-radius: 5px;
+    min-width: 400px;
+    min-height: 250px;
+}
+
+/* --- Ayırıcı --- */
+QSplitter::handle {
+    background-color: #555555;
+    height: 2px;
+    width: 2px;
+}
+
+QSplitter::handle:horizontal {
+    width: 4px;
+}
+
+QSplitter::handle:vertical {
+    height: 4px;
+}
+
+QSplitter::handle:hover {
+    background-color: #00BCD4; /* Turkuaz - hover rengi */
+}
+
+/* --- Ana Pencere --- */
+QMainWindow {
+    min-width: 900px;
+    min-height: 700px;
+}
+
+/* --- MIDI Analiz Paneli Özel Stilleri --- */
+#midi_file_group, #analysis_group {
+    background-color: rgba(30, 30, 30, 0.85);
+    border: 2px solid rgba(0, 188, 212, 0.7); /* Turkuaz kenarlık */
+}
+
+/* --- MIDI Üretim Paneli Özel Stilleri --- */
+#midi_uretim_group, #result_group {
+    background-color: rgba(30, 30, 30, 0.85);
+    border: 2px solid rgba(0, 188, 212, 0.7); /* Turkuaz kenarlık */
+}
+
+/* --- Hafıza Paneli Özel Stilleri --- */
+#pattern_group, #detail_group {
+    background-color: rgba(30, 30, 30, 0.85);
+    border: 2px solid rgba(0, 188, 212, 0.7); /* Turkuaz kenarlık */
+}
+
+/* --- Ayarlar Paneli Özel Stilleri --- */
+#settings_group, #paths_group {
+    background-color: rgba(30, 30, 30, 0.85);
+    border: 2px solid rgba(0, 188, 212, 0.7); /* Turkuaz kenarlık */
+}
+
+/* --- Özel Buton Stilleri --- */
+/* Tüm butonlar için aynı renk kullanılıyor - tutarlılık için */
+#generate_button, #analyze_button, #browse_button, #search_memory_button,
+#save_settings_button, #load_settings_button, #export_settings_button, #import_settings_button {
+    background-color: #00BCD4; /* Turkuaz - tüm butonlar için */
+}
+
+/* Üretim butonu biraz daha büyük */
+#generate_button {
+    font-size: 12pt;
+    min-height: 40px;
+    min-width: 250px;
+}

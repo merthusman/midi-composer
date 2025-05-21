@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+*.pyz
+
+# Installer logs
+
+
+# PyInstaller
+*.spec
+*.pkg
+*.exe
+*.dll
+*.pyd
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Test outputs
+
+
+# Conda environment
+.env
+.venv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# MIDIComposer specific
+midi_memory.json

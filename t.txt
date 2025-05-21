@@ -1,0 +1,14 @@
+2025-05-17 12:29:35.450107: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-05-17 12:29:37.600506: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\lombi\midi_composer_test\src\main.py", line 14, in <module>
+    from src.gui.main_window import MainWindow
+  File "C:\Users\lombi\midi_composer_test\src\gui\main_window.py", line 136, in <module>
+    from src.model import midi_model as midi_model_module
+  File "C:\Users\lombi\midi_composer_test\src\model\midi_model.py", line 126
+    except Exception as e:
+    ^^^^^^
+SyntaxError: invalid syntax
+--- Running the verified and corrected main_window.py ---

@@ -1,0 +1,9 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+    <file>resources/icons/upload.png</file>
+    <file>resources/icons/down-arrow.svg</file>
+    <file>resources/icons/up-arrow.svg</file>
+    <file>resources/icons/check.svg</file>
+</qresource>
+</RCC>

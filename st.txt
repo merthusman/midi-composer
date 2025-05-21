@@ -1,0 +1,56 @@
+2025-05-17 12:32:18.126205: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-05-17 12:32:20.582211: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:src.gui.main_window:Icon file not found at expected path: C:\Users\lombi\midi_composer_test\src\resources\icons\upload.png
+WARNING:src.gui.main_window:Icon file not found for title: C:\Users\lombi\midi_composer_test\src\resources\icons\upload.png
+WARNING:src.gui.main_window:Icon not found at C:\Users\lombi\midi_composer_test\src\resources\icons\upload.png
+WARNING:src.gui.main_window:Icon file not found for center title: C:\Users\lombi\midi_composer_test\src\resources\icons\analysis.png
+WARNING:src.gui.main_window:Icon file not found for right title: C:\Users\lombi\midi_composer_test\src\resources\icons\generate.png
+2025-05-17 12:32:28.015040: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+DEBUG (init): Model initialized with resolution=0.125, calculated steps_per_bar = 16
+DEBUG (build): Starting build_model
+DEBUG (build): Input shape config: (32, 88, 1)
+ERROR:src.gui.main_window:Failed to initialize core components: A KerasTensor cannot be used as input to a TensorFlow function. A KerasTensor is a symbolic placeholder for a shape and dtype, used when constructing Keras Functional models or Keras Functions. You can only use it as input to a Keras layer or a Keras operation (from the namespaces `keras.layers` and `keras.ops`). You are likely doing something like:
+
+```
+x = Input(...)
+...
+tf_fn(x)  # Invalid.
+```
+
+What you should do instead is wrap `tf_fn` in a layer:
+
+```
+class MyLayer(Layer):
+    def call(self, x):
+        return tf_fn(x)
+
+x = MyLayer()(x)
+```
+Traceback (most recent call last):
+  File "C:\Users\lombi\midi_composer_test\src\gui\main_window.py", line 778, in __init__
+    self.midi_model.build_model()
+  File "C:\Users\lombi\midi_composer_test\src\model\midi_model.py", line 327, in build_model
+  File "C:\Users\lombi\anaconda3\envs\midi_composer_py12\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\lombi\anaconda3\envs\midi_composer_py12\Lib\site-packages\keras\src\backend\common\keras_tensor.py", line 156, in __tf_tensor__
+    raise ValueError(
+ValueError: A KerasTensor cannot be used as input to a TensorFlow function. A KerasTensor is a symbolic placeholder for a shape and dtype, used when constructing Keras Functional models or Keras Functions. You can only use it as input to a Keras layer or a Keras operation (from the namespaces `keras.layers` and `keras.ops`). You are likely doing something like:
+
+```
+x = Input(...)
+...
+tf_fn(x)  # Invalid.
+```
+
+What you should do instead is wrap `tf_fn` in a layer:
+
+```
+class MyLayer(Layer):
+    def call(self, x):
+        return tf_fn(x)
+
+x = MyLayer()(x)
+```
+
+--- Running the verified and corrected main_window.py ---
